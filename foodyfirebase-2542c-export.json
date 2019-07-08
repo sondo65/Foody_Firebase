@@ -1,0 +1,78 @@
+{
+  "categoryFoods" : {
+    "categoryCode1" : "grill",
+    "categoryCode2" : "soup"
+  },
+  "commentImages" : {
+    "cmtCode1" : {
+      "imageName" : "imgPath.jpg",
+      "imageName2" : "path2.jpg"
+    }
+  },
+  "comments" : {
+    "restaurantCode1" : {
+      "cmtCode1" : {
+        "content" : "huhu",
+        "like" : 45,
+        "title" : "hahaah",
+        "unlike" : 4,
+        "userID" : 4676576
+      },
+      "cmtCode2" : {
+        "content" : "kdkdjfdkf",
+        "like" : 3,
+        "title" : "ddihfudi",
+        "userID" : 45768787
+      }
+    }
+  },
+  "restaurants" : {
+    "resCode1" : {
+      "branchs" : "[ res1,res2,...]",
+      "introduceVideo" : "videoPath.mp4",
+      "isShip" : 0,
+      "latitude" : 100.44,
+      "longitude" : 56,
+      "restaurantName" : "Phuc Nhan",
+      "utilities" : "[ utilitiesCode1,code2] ]",
+      "voteTurn" : 0
+    }
+  },
+  "restaurantImages" : {
+    "resCode1" : {
+      "imageCode1" : "imagePath1.jpg",
+      "imageCode2" : "imagePath2.jpg"
+    }
+  },
+  "restaurantMenus" : {
+    "restaurantCode1" : {
+      "categoryCode1" : {
+        "foodCode1" : {
+          "cost" : 47000,
+          "image" : "img.jpg",
+          "name" : "muc nuong"
+        },
+        "foodCode2" : {
+          "cost" : 5000,
+          "image" : "img.jpg",
+          "name" : "chan ga nuong"
+        }
+      },
+      "categoryCode2" : {
+        "foodCode3" : {
+          "cost" : 120000,
+          "image" : "img.jpg",
+          "name" : "soup ga"
+        }
+      }
+    }
+  },
+  "utilitiesManager" : {
+    "utilitiesCode1" : {
+      "utilitiesName" : "car part free"
+    },
+    "utilitiesCode2" : {
+      "utilitiesName" : "free wifi"
+    }
+  }
+}
