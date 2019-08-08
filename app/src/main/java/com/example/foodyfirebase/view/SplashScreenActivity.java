@@ -31,6 +31,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 public void run() {
                     Intent iSignIn = new Intent(SplashScreenActivity.this,SignInActivity.class);
                     startActivity(iSignIn);
+                    finish();
                 }
             },TIME_TO_LOADING);
         } catch (PackageManager.NameNotFoundException e) {

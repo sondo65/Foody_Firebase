@@ -10,4 +10,26 @@
     <string name="signin">Sign In</string>
     <string name="forgot_password">Forgot Password ?</string>
     <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="request_input_email">Please Input Your Email !</string>
+    <string name="request_input_Password">Please Input Your Password !</string>
+    <string name="request_input_valid_email">Please Input Valid Email !</string>
+    <string name="input_pass_too_weak">Password Must Be At Least 6 Character !</string>
+    <string name="request_confirm_Password">Let\'s Input Like Your Password Above !</string>
+    <string name="announce_register_success">Register Email Success !</string>
+    <string name="announce_register_failed">Register Email Failed !</string>
+    <string name="progress_create_user_email">Activating...\u0020</string>
+    <string name="signin_email_failed">Sign In Email Failed !</string>
+    <string name="restore_password">Restore Password</string>
+    <string name="guide_restore_password">Let\'s Input Your Email To Restore Your Password.</string>
+    <string name="restore_pass">Restore Password</string>
+    <string name="not_a_member">You Are Not A Member ?</string>
+    <string name="register_new"><u>Register New</u></string>
+    <string name="restore_pass_failed">Restore Failed !</string>
+    <string name="email_restore_pass_sent">Email Restore Pass Has Sent.</string>
+    <string name="handling">Handling...\u0020</string>
+    <string name="sign_in_fb_failed_credential">AuthCredential Has Been Use !</string>
+    <string name="sign_in_fb_failed">Sign In Facebook Failed</string>
+    <string name="sign_in_gg_failed">Sign In Google Failed</string>
 </resources>
