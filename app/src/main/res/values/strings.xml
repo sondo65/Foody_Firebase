@@ -19,6 +19,7 @@
     <string name="request_confirm_Password">Let\'s Input Like Your Password Above !</string>
     <string name="announce_register_success">Register Email Success !</string>
     <string name="announce_register_failed">Register Email Failed !</string>
+    <string name="announce_connect_failed">Connection failed ! Recheck your WIFI again !</string>
     <string name="progress_create_user_email">Activating...\u0020</string>
     <string name="signin_email_failed">Sign In Email Failed !</string>
     <string name="restore_password">Restore Password</string>
@@ -32,4 +33,15 @@
     <string name="sign_in_fb_failed_credential">AuthCredential Has Been Use !</string>
     <string name="sign_in_fb_failed">Sign In Facebook Failed</string>
     <string name="sign_in_gg_failed">Sign In Google Failed</string>
+    <string name="places">Places</string>
+    <string name="food">Food</string>
+    <string name="latest">Latest</string>
+    <string name="category">Category</string>
+    <string name="area">HCM city</string>
+    <string name="nearby">Nearby</string>
+    <string name="game_and_fun">Game And Fun</string>
+    <string name="reviews">Reviews</string>
+    <string name="blogs">Blogs</string>
+    <string name="top_member">Top Member</string>
+    <string name="oder_delivery">Oder Delivery</string>
 </resources>

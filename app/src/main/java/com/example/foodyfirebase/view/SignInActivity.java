@@ -114,7 +114,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     }
 
     private void createClientGoogle(){
-
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder()
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -127,7 +126,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     }
 
     private boolean validateUserInput(String email, String pass){
-
         if(email.trim().length() == 0){
             Toast.makeText(this,getString(R.string.request_input_email),Toast.LENGTH_LONG).show();
         }else if(!validateEmail(email)){
@@ -146,7 +144,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     }
 
     private void signInWithEmail(){
-
         progressDialog.setMessage(getString(R.string.handling));
         String email = edtEmail.getText().toString();
         String pass = edtPassword.getText().toString();
@@ -165,7 +162,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
                 }
             });
         }
-
     }
 
     private void signInWithGoogle( GoogleApiClient apiClient){
@@ -199,11 +195,9 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         });
     }
 
-    private void signInFirebaseWithAuthCredential( String tokenID )
-    {
+    private void signInFirebaseWithAuthCredential( String tokenID ){
         progressDialog.show();
-        if( CHECK_SIGN_IN_TYPE == SIGN_IN_WITH_GOOGLE )
-        {
+        if( CHECK_SIGN_IN_TYPE == SIGN_IN_WITH_GOOGLE ){
             AuthCredential authCredential = GoogleAuthProvider.getCredential(tokenID,null);
             firebaseAuth.signInWithCredential(authCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
@@ -282,6 +276,6 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
+        Toast.makeText(SignInActivity.this,getString(R.string.announce_connect_failed),Toast.LENGTH_LONG).show();
     }
 }

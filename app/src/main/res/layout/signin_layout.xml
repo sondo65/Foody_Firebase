@@ -28,11 +28,11 @@
         </LinearLayout>
 
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.4"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:gravity="center">
 
             <EditText
                 android:id="@+id/edtEmail"
@@ -41,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/ic_perm_identity_white_24dp"
                 android:drawablePadding="@dimen/_10sdp"
-                android:singleLine="true"
                 android:hint="@string/email"
+                android:singleLine="true"
                 android:textColorHint="@color/whiteColor" />
 
             <EditText
@@ -53,9 +53,9 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:drawableLeft="@drawable/ic_lock_outline_white_24dp"
                 android:drawablePadding="@dimen/_10sdp"
-                android:singleLine="true"
-                android:inputType="textPassword"
                 android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
                 android:textColorHint="@color/whiteColor" />
 
             <Button

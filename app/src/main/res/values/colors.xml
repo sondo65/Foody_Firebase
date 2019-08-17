@@ -2,9 +2,11 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#cd2027</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent">#D81B60</color>
     <color name="splashBackgroundColor">#cd2027</color>
     <color name="transparentBackgroundColor">#66000000</color>
     <color name="whiteColor">#FFFFFF</color>
     <color name="facebookColor">#189aca</color>
+    <color name="blackColor">#000</color>
+    <color name="homeBackgroundColor">#CCC</color>
 </resources>

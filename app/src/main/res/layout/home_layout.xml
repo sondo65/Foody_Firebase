@@ -1,11 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/homeBackgroundColor"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:background="@drawable/chuf"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:background="@drawable/custom_rad_group"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radPlaces"
+                android:checked="true"
+                android:layout_weight="1"
+                android:textColor="@drawable/change_text_color_radio_button"
+                android:padding="@dimen/_10sdp"
+                android:background="@drawable/custom_rad_where"
+                android:button="@android:color/transparent"
+                android:text="@string/places"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+               android:id="@+id/radFood"
+                android:layout_weight="1"
+                android:textColor="@drawable/change_text_color_radio_button"
+                android:padding="@dimen/_10sdp"
+                android:button="@android:color/transparent"
+                android:text="@string/food"
+                android:background="@drawable/custom_rad_what_eat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_gravity="right"
+            android:background="@drawable/ic_add_white_24dp"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerHome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
 
 </LinearLayout>
