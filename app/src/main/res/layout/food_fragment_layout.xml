@@ -74,112 +74,112 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
-                    android:padding="@dimen/_10sdp"
-                    android:gravity="left|center"
-                    android:drawablePadding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteColor"
                     android:drawableLeft="@drawable/nearby"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center"
+                    android:padding="@dimen/_10sdp"
                     android:text="@string/nearby"
-                    android:textColor="@color/blackColor"
                     android:textAllCaps="false"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/whiteColor"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/blackColor" />
 
                 <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteColor"
                     android:drawableLeft="@drawable/order"
-                    android:padding="@dimen/_10sdp"
-                    android:gravity="left|center"
                     android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center"
+                    android:padding="@dimen/_10sdp"
                     android:text="@string/oder_delivery"
-                    android:textColor="@color/blackColor"
                     android:textAllCaps="false"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/whiteColor"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/blackColor" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteColor"
                     android:drawableLeft="@drawable/user"
-                    android:padding="@dimen/_10sdp"
-                    android:gravity="left|center"
                     android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center"
+                    android:padding="@dimen/_10sdp"
                     android:text="@string/top_member"
-                    android:textColor="@color/blackColor"
                     android:textAllCaps="false"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/whiteColor"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/blackColor" />
 
                 <Button
-                    android:drawableLeft="@drawable/gameandfun"
-                    android:padding="@dimen/_10sdp"
-                    android:gravity="left|center"
-                    android:drawablePadding="@dimen/_10sdp"
-                    android:text="@string/game_and_fun"
-                    android:textColor="@color/blackColor"
-                    android:textAllCaps="false"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/whiteColor"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteColor"
+                    android:drawableLeft="@drawable/gameandfun"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/game_and_fun"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blackColor" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
                 <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteColor"
                     android:drawableLeft="@drawable/review"
-                    android:padding="@dimen/_10sdp"
-                    android:gravity="left|center"
                     android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center"
+                    android:padding="@dimen/_10sdp"
                     android:text="@string/reviews"
-                    android:textColor="@color/blackColor"
                     android:textAllCaps="false"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/whiteColor"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/blackColor" />
 
                 <Button
-                    android:drawableLeft="@drawable/blog"
-                    android:padding="@dimen/_10sdp"
-                    android:gravity="left|center"
-                    android:drawablePadding="@dimen/_10sdp"
-                    android:text="@string/blogs"
-                    android:textColor="@color/blackColor"
-                    android:textAllCaps="false"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:background="@color/whiteColor"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:background="@color/whiteColor"
+                    android:drawableLeft="@drawable/blog"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/blogs"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blackColor" />
 
             </LinearLayout>
 

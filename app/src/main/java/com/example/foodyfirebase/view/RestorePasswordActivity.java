@@ -45,9 +45,9 @@ public class RestorePasswordActivity extends AppCompatActivity implements View.O
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.txtRegisterNow:
-                Intent iRegister = new Intent(RestorePasswordActivity.this,RegisterActivity.class);
+                Intent iRegister = new Intent(RestorePasswordActivity.this, RegisterActivity.class);
                 startActivity(iRegister);
                 break;
             case R.id.btnRestorePass:
@@ -57,23 +57,23 @@ public class RestorePasswordActivity extends AppCompatActivity implements View.O
         }
     }
 
-    private void restorePassword(){
+    private void restorePassword() {
         String email = edtEmailRestore.getText().toString();
-        if(email.trim().length() == 0){
-            Toast.makeText(this,getString(R.string.request_input_email),Toast.LENGTH_LONG).show();
-        }else if(!validateEmail(email)){
-            Toast.makeText(this,getString(R.string.request_input_valid_email),Toast.LENGTH_LONG).show();
-        }else{
+        if (email.trim().length() == 0) {
+            Toast.makeText(this, getString(R.string.request_input_email), Toast.LENGTH_LONG).show();
+        } else if (!validateEmail(email)) {
+            Toast.makeText(this, getString(R.string.request_input_valid_email), Toast.LENGTH_LONG).show();
+        } else {
             progressDialog.show();
             firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
-                    if(task.isSuccessful()){
+                    if (task.isSuccessful()) {
                         progressDialog.dismiss();
-                        Toast.makeText(RestorePasswordActivity.this,getString(R.string.email_restore_pass_sent),Toast.LENGTH_LONG).show();
-                    }else{
+                        Toast.makeText(RestorePasswordActivity.this, getString(R.string.email_restore_pass_sent), Toast.LENGTH_LONG).show();
+                    } else {
                         progressDialog.dismiss();
-                        Toast.makeText(RestorePasswordActivity.this,getString(R.string.restore_pass_failed),Toast.LENGTH_LONG).show();
+                        Toast.makeText(RestorePasswordActivity.this, getString(R.string.restore_pass_failed), Toast.LENGTH_LONG).show();
                         edtEmailRestore.setText(null);
                     }
                 }
@@ -81,7 +81,7 @@ public class RestorePasswordActivity extends AppCompatActivity implements View.O
         }
     }
 
-    private boolean validateEmail(String email){
+    private boolean validateEmail(String email) {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 }

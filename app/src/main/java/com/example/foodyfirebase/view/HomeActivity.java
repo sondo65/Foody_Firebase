@@ -1,8 +1,8 @@
 package com.example.foodyfirebase.view;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,11 +11,12 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.foodyfirebase.R;
 import com.example.foodyfirebase.adapters.AdapterViewPagerHome;
 
-public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
+public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, RadioGroup.OnCheckedChangeListener {
 
     private ViewPager viewPagerHome;
     private AdapterViewPagerHome adapterViewPagerHome;
     private RadioButton radPlaces,radFood;
+    private RadioGroup radioGroup;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,10 +26,12 @@ public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageC
         viewPagerHome = findViewById(R.id.viewPagerHome);
         radPlaces = findViewById(R.id.radPlaces);
         radFood = findViewById(R.id.radFood);
+        radioGroup = findViewById(R.id.radioGroup);
 
         adapterViewPagerHome = new AdapterViewPagerHome(getSupportFragmentManager());
         viewPagerHome.setAdapter(adapterViewPagerHome);
         viewPagerHome.setOnPageChangeListener(this);
+        radioGroup.setOnCheckedChangeListener(this);
 
     }
 
@@ -52,5 +55,17 @@ public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageC
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+        switch (i){
+            case R.id.radPlaces:
+                viewPagerHome.setCurrentItem(0);
+                break;
+            case R.id.radFood:
+                viewPagerHome.setCurrentItem(1);
+                break;
+        }
     }
 }
