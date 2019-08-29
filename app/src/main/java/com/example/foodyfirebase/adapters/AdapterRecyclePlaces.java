@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodyfirebase.R;
 import com.example.foodyfirebase.model.Restaurant;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -61,7 +62,8 @@ public class AdapterRecyclePlaces extends RecyclerView.Adapter<AdapterRecyclePla
         }
         if(restaurant.getRestaurentImages().size()>0){
             StorageReference storageImages = FirebaseStorage.getInstance()
-                    .getReference().child("images").child(restaurant.getRestaurantCode())
+                    .getReference().child("images")
+                    .child(restaurant.getRestaurantCode())
                     .child(restaurant.getRestaurentImages().get(0));
             final long ONE_MEGABYTE = 1024 * 1024;
             storageImages.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
@@ -69,6 +71,10 @@ public class AdapterRecyclePlaces extends RecyclerView.Adapter<AdapterRecyclePla
                 public void onSuccess(byte[] bytes) {
                     Bitmap bitmap = BitmapFactory.decodeByteArray(bytes,0,bytes.length);
                     holder.imgRestaurant.setImageBitmap(bitmap);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
                 }
             });
         }

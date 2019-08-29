@@ -49,6 +49,7 @@
         </RadioGroup>
 
         <ImageView
+            android:id="@+id/imgAddRestaurant"
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_gravity="right"
             android:background="@drawable/ic_add_white_24dp"
