@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.foodyfirebase.R;
+import com.example.foodyfirebase.adapters.AdapterRecyclePlaces;
 import com.example.foodyfirebase.adapters.AdapterViewPagerHome;
 import com.example.foodyfirebase.model.Restaurant;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -20,7 +21,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, RadioGroup.OnCheckedChangeListener, View.OnClickListener {
+public class HomeActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener, RadioGroup.OnCheckedChangeListener, View.OnClickListener{
 
     private ViewPager viewPagerHome;
     private AdapterViewPagerHome adapterViewPagerHome;

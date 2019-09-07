@@ -37,6 +37,5 @@ public class SplashScreenActivity extends AppCompatActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 }

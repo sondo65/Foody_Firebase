@@ -28,20 +28,30 @@ public class AdapterRecyclePlaces extends RecyclerView.Adapter<AdapterRecyclePla
 
     List<Restaurant> lsRestaurant;
     int resource;
-    public AdapterRecyclePlaces(List<Restaurant> lsRestaurant, int resource){
+    OnRestaurantListener mOnRestaurantListener;
+    public AdapterRecyclePlaces(List<Restaurant> lsRestaurant, int resource,OnRestaurantListener onRestaurantListener){
         this.lsRestaurant = lsRestaurant;
         this.resource = resource;
+        this.mOnRestaurantListener = onRestaurantListener;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView tvRestaurantName;
         Button btnOderPlaces;
         ImageView imgRestaurant;
-        public ViewHolder(@NonNull View itemView) {
+        OnRestaurantListener onRestaurantListener;
+        public ViewHolder(@NonNull View itemView, OnRestaurantListener onRestaurantListener) {
             super(itemView);
             tvRestaurantName = itemView.findViewById(R.id.tvRestaurantNamePlaces);
             btnOderPlaces = itemView.findViewById(R.id.btnOderPlaces);
             imgRestaurant = itemView.findViewById(R.id.imgRestaurant);
+            this.onRestaurantListener = onRestaurantListener;
+            imgRestaurant.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            onRestaurantListener.onRestaurantClick(getAdapterPosition());
         }
     }
 
@@ -49,7 +59,7 @@ public class AdapterRecyclePlaces extends RecyclerView.Adapter<AdapterRecyclePla
     @Override
     public AdapterRecyclePlaces.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
-        ViewHolder viewHolder = new ViewHolder(view);
+        ViewHolder viewHolder = new ViewHolder(view,mOnRestaurantListener);
         return viewHolder;
     }
 
@@ -83,6 +93,10 @@ public class AdapterRecyclePlaces extends RecyclerView.Adapter<AdapterRecyclePla
     @Override
     public int getItemCount() {
         return lsRestaurant.size();
+    }
+
+    public interface OnRestaurantListener{
+        void onRestaurantClick(int position);
     }
 
 }

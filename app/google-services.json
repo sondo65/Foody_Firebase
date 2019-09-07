@@ -15,11 +15,27 @@
       },
       "oauth_client": [
         {
-          "client_id": "271358990354-8f2ef0smupl7idhlaffq2o48sut6r56s.apps.googleusercontent.com",
+          "client_id": "271358990354-msp5p3bu4bln33jdh8kddrpmm3t9rkjk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodyfirebase",
+            "certificate_hash": "4fdaec57415c782fff75fe3cbd49a7df22060abe"
+          }
+        },
+        {
+          "client_id": "271358990354-4tc9bodt5hq4vm7batun5fasjrg8ngk9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.foodyfirebase",
             "certificate_hash": "8c930fa0b14b8fd14f6ddbfb5bdce19003dfaae0"
+          }
+        },
+        {
+          "client_id": "271358990354-kfkrq69vege46203eh5sutckk72cd6tm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodyfirebase",
+            "certificate_hash": "ab70a1900dc66e1baeff65c7971a2e365a11d72f"
           }
         },
         {

@@ -1,18 +1,5 @@
 package com.example.foodyfirebase.model;
 
-import android.util.Log;
-
-import androidx.annotation.NonNull;
-
-import com.example.foodyfirebase.controller.PlacesController;
-import com.example.foodyfirebase.controller.interfaces.PlacesCallBackInterface;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant {
@@ -27,10 +14,9 @@ public class Restaurant {
     long voteTurn;
     List<String> restaurentImages;
 
-    private DatabaseReference rootNode;
 
     public Restaurant() {
-        rootNode = FirebaseDatabase.getInstance().getReference();
+
     }
 
     public String getRestaurantCode() {
@@ -105,34 +91,4 @@ public class Restaurant {
         this.voteTurn = voteTurn;
     }
 
-    public void getListRestaurant(final PlacesCallBackInterface placesInterface) {
-        ValueEventListener eventListener = new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                PlacesController.lsRes.clear();
-                DataSnapshot dataRes = dataSnapshot.child("restaurants");
-                Log.d("data","onDatachange is running");
-                for (DataSnapshot valueRes : dataRes.getChildren()) {
-                    Restaurant restaurant = valueRes.getValue(Restaurant.class);
-                    restaurant.setRestaurantCode(valueRes.getKey());
-                    DataSnapshot dataListImage = (DataSnapshot) dataSnapshot.child("restaurantImages").child(valueRes.getKey());
-                    List<String> listImages = new ArrayList<>();
-                    for(DataSnapshot valueImages  : dataListImage.getChildren())
-                    {
-                        String image = valueImages.getValue(String.class);
-                        listImages.add(image);
-                    }
-                    restaurant.setRestaurentImages(listImages);
-                    placesInterface.getListRestaurant(restaurant);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        };
-
-        rootNode.addValueEventListener(eventListener);
-    }
 }
